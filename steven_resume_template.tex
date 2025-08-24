@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10.5pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -90,7 +90,9 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
+\renewcommand{\labelitemi}{$\circ$}
 \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\circ$}
 
 %\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, label={}]}
@@ -119,8 +121,8 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Bachelor of Science $|$ Computer Science and Information Security}{Anticipated Dec. 2023}
-    {\href{https://new.jjay.cuny.edu/}{{{{John Jay College of Criminal Justice (CUNY)}}}}}{GPA: 3.84}
+      {Bachelor of Science $|$ Computer Science}{Jan. 2024}
+    {\href{https://new.jjay.cuny.edu/}{{{{John Jay College of Criminal Justice (CUNY)}}}}}{GPA: 3.88}
     \vspace{.5em}
     \resumeSubheading
       {Associate of Science $|$ Computer Science}{May 2022}
@@ -130,85 +132,51 @@
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
-  \resumeSubHeadingListStart
-      \resumeSubheading
-        {Software Engineer Intern}{May 2022 - October 2023}
-    {{{{The General}}}}{Nashville, TN (remote)}
-    \resumeItemListStart
-         \resumeItemWithoutTitle
-          {Developed responsive, ADA-compliant landing pages utilizing HTML, CSS/Sass, JavaScript, jQuery, and Bootstrap 4. Achieved a 23\% growth in organic traffic for thegeneral.com, attracting an additional 192.3K visitors in Q3 2022.}
-      \resumeItemListEnd
-    \resumeItemListStart
-         \resumeItemWithoutTitle
-          {Built an A/B test on a Spring application using Java, Db2 SQL, JavaScript, HTML, and CSS leading to an increase of up to 8\% in sign-ups for roadside assistance policies, surpassing a 30\% target.}
-      \resumeItemListEnd
-      \resumeItemListStart
-         \resumeItemWithoutTitle
-          {Modernized a mature Node.js application from version 10 to 16. Rewrote essential bootstrapping logic to eliminate a bloated internal npm package, refined the Gulp workflow, enhanced application loggers for better traceability and utilized Snyk to address and eliminate all vulnerabilities.}
-      \resumeItemListEnd
-      \resumeItemListStart
-         \resumeItemWithoutTitle
-          {Addressed the dev backlog on Jira by fixing numerous bugs and introducing significant enhancements. Collaborated closely with QA and UX teams to ensure quality and improved user experience.}
-      \resumeItemListEnd
+\resumeSubHeadingListStart
+
+% Sherwin-Williams
+\resumeSubheading
+{IT Analyst/Developer I --- IT Rotational Development Program}{Jun. 2024 -- Present}
+{Sherwin-Williams}{Cleveland, OH (Hybrid)}
+
+% Rotation 2
+
+\resumeSubHeadingListStart
+\resumeSubheadingExp{Rotation 2 --- Backend Developer}{Java, Spring Boot 3, Oracle SQL} {Mar. 2025 -- Present}
+\resumeItemListStart
+ \vspace{.5em}
+\resumeItemWithoutTitle{Contribute to modernization of pricing platform across 16+ microservices: implement and optimize REST endpoints and Oracle SQL/JPA queries; eliminate N+1s and unnecessary round-trips in the legacy pricing algorithm.}
+\resumeItemWithoutTitle{Standardized code quality: introduced Spotless; ran team demo; executed staged rollout across repos to align Eclipse/VS Code formatting.}
+\resumeItemWithoutTitle{Diagnose and implement fixes for pilot-found defects and critical business requests; verify via manual API tests/regressions and help coordinate release to pilot stores.}
+\resumeItemWithoutTitle{Conduct code reviews and pair programming; mentored a summer intern on backend conventions.}
+\resumeItemWithoutTitle{Facilitate daily stand-ups; lead planning/estimation, refinement, and retros in Jira.}
+\resumeItemListEnd
+
+
+% Rotation 1
+ \vspace{.5em}
+\resumeSubheadingExp{Rotation 1 --- Frontend Developer}{Vue 3, TypeScript, Pinia, Vite}{Jun. 2024 -- Mar. 2025}
+\resumeItemListStart
+ \vspace{.5em}
+\resumeItemWithoutTitle{Built features for an internal pricing application replacing a 30-year legacy store tool for customer/pricing management; partnered with UX and business from requirements through pilot.}
+\resumeItemWithoutTitle{Primary developer for Scheduled Delivery Fee module: enabled configuration of delivery fees and minimum purchase thresholds for free/next-day delivery; demoed to stakeholders and director.}
+\resumeItemWithoutTitle{Introduced TanStack Query to standardize data-fetching and caching; reduced redundant calls and simplified state.}
+ \vspace{-1.15em}
+\resumeItemWithoutTitle{Adopted Vue Testing Library to shift tests toward user-centric assertions and reduce reliance on data-testids.}
+\resumeItemWithoutTitle{Mentored a new team member; ran code reviews and stakeholder demos.}
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-  % Laundry Res
-    \vspace{0pt}\item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-       \href{#4}{\textbf{WebRTC Camera Access System}} \small{{ $|$ Node.js, Express, MongoDB, EJS, Python, Websockets, aiortc}}  & {\href{https://github.com/lyncasterc/sec-cam}{ \faIcon{code}} }  \\
-        \end{tabular*}\vspace{-7pt}
-    \resumeItemListStart
-        \resumeItemWithoutTitle
-          {Engineered a WebRTC application integrating Node.js, Express, and MongoDB for the server side, with Python handling camera operations.}
-        \resumeItemWithoutTitle
-          {Designed a user authentication system allowing users to register and remotely access their specific camera feeds via a web interface.}
-        \resumeItemWithoutTitle
-          {Implemented  signaling using websockets and utilized aiortc for WebRTC, ensuring efficient real-time camera feed streaming.}
-      \resumeItemListEnd
-      % Laundry Res
-    \vspace{0pt}\item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-       \href{#4}{\textbf{Laundry Reservation System}} \small{{ $|$ PHP, MySQL, HTML, CSS, JavaScript}}  & {\href{https://github.com/lyncasterc/laundry-reservation}{ \faIcon{code}} }  \\
-        \end{tabular*}\vspace{-7pt}
-    \resumeItemListStart
-        \resumeItemWithoutTitle
-          {Developed a system for tenants of a fictional apartment complex to log in, view, and reserve available laundry room\\time slots.}
-        \resumeItemWithoutTitle
-          {Managed backend design and implementation, and frontend development using JavaScript.}
-        \resumeItemWithoutTitle
-          {Led the team in system design discussions, task coordination, and manual testing.}
-      \resumeItemListEnd
-            % Instaclone
-          \vspace{0pt}\item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-       \href{#4}{\textbf{Instaclone}} \small{{$|$ MongoDB, Express, React, Node.js, TypeScript}} 
-       & {\href{https://github.com/lyncasterc/instaclone}{ \faIcon{code}} }  \\
-        \end{tabular*}\vspace{-7pt}
-    \resumeItemListStart
-        \resumeItemWithoutTitle
-          {Building a full-stack Instagram clone with Mantine styling, TypeScript, and integrated test-driven development using Cypress and React Testing Library.}
-                  \resumeItemWithoutTitle
-          {Implemented a CI/CD workflow with GitHub Actions and set up user authentication using JWT.}
-            \resumeItemWithoutTitle
-            {Integrated the Cloudinary Upload API for image management and uploads.} 
-      \resumeItemListEnd
-
-        % CLI Chess
-          \vspace{0pt}\item
-        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-       \href{#4}{\textbf{CLI Chess}} \small{{$|$ Ruby}} & {\href{https://github.com/lyncasterc/chess}{ \faIcon{code}} }  \\
-        \end{tabular*}\vspace{-7pt}
-    
-    \resumeItemListStart
-          \resumeItemWithoutTitle
-{Developed a command-line interface (CLI) chess game in Ruby, implementing object-oriented design principles\\and game logic.}
-\resumeItemWithoutTitle
-{Utilized RSpec for comprehensive unit and integration testing, ensuring accurate gameplay.}
-      \resumeItemListEnd
-      \resumeSubHeadingListEnd
+% The General
+\resumeSubheading
+{Software Engineer Intern}{May 2022 -- Oct. 2023}
+{The General}{Nashville, TN (Remote)}
+\resumeItemListStart
+\resumeItemWithoutTitle{Developed responsive, ADA-compliant landing pages (HTML, CSS/Sass, JavaScript, jQuery, Bootstrap 4); contributed to a 23\% lift in organic traffic and +192K visitors in Q3 2022.}
+\resumeItemWithoutTitle{Built an A/B test in a Spring application (Java, Db2 SQL, JavaScript) that increased sign-ups for roadside-assistance policies by up to 8\%.}
+\resumeItemWithoutTitle{Modernized a mature Node.js app (v10\,$\rightarrow$\,v16); removed a bloated internal package, streamlined Gulp, and remediated vulnerabilities using Snyk.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 % -----------OS Contributions-----------------
 \section{Open Source Contributions}
@@ -223,11 +191,12 @@
 \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
+%--------TECHNICAL SKILLS------------
 \section{Technical Skills}
-	\resumeSubHeadingListStart
-            \resumeSubItem{Languages}{JavaScript, TypeScript, Python, C++, Java, Ruby, PHP, SQL}
-        	\resumeSubItem{Web Technologies}{Node.js, Express, MongoDB, React, Gulp, HTML, Sass/CSS, jQuery, Bootstrap, Ruby on Rails}    
-             \resumeSubItem{Tools}{GitLab, Bitbucket, GitHub, Git, Unix Terminal, Jira, Snyk, Microsoft Teams, BrowserStack}
-             \resumeSubItem{Relevant Courses}{Operating Systems, Data Structures, Algorithms,  Software Development, Databases and Data Mining}
-\resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{Java, TypeScript, JavaScript, SQL}
+    \resumeSubItem{Backend}{Spring Boot 3, REST APIs, Gradle, JUnit 5, Oracle SQL, JPA/Hibernate}
+    \resumeSubItem{Frontend}{Vue 3, Vite, Pinia, TanStack Query, Ant Design Vue, Vitest, Testing Library}
+    \resumeSubItem{Tooling}{Spotless, GitHub Actions, Git, Unix, Jira, Microsoft Teams}
+  \resumeSubHeadingListEnd
 \end{document}
